@@ -8,19 +8,18 @@ Para auxiliar na adminstração do estabelecimento, o aplicativo mobile faz a al
 O cliente ainda pode acompanhar o andamento e relatório de consumo via QR code.
 
 
-###SETEMBRO
-*Sistema Web:*
+### SETEMBRO
+**Sistema Web:**
 - Cadastro de Usuário
 - Login
 
-###OUTUBRO:
-*Sistema Web*
+### OUTUBRO:
 - Sistema de cadastro de produtos, categorias;
 - Finalização do Sistema Web;
 - Início da criação do aplicativo;
 - Processo de integração com o Banco de Dados;
 
-###NOVEMBRO:
+### NOVEMBRO:
 - Integração do QR Code(Cliente visualiza o pedido);
 - Finalizar o aplicativo.
 
