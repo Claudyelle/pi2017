@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Login</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <label for="email">Endereço de e-mail</label>
+        <input type="email" class="form-control" id="email" placeholder="victorassis545@gmail.com">
+      </div>
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" class="form-control" id="senha" placeholder="********">
+      </div>
+      
+      <button type="button" id="btnLogin" class="btn btn-default">Acessar</button>
+      <button type="button" id="btnSignUp" class="btn btn-default">Cadastrar</button>
+      <button type="button" id="btnLogout" class="btn btn-default hide">Sair</button>
+</form>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+
+
+<script>
+
+// ####  ATENÇAO   ######
+/*
+	Para usar a autenticação de EMAIL/SENHA deve ativar no console.
+
+	E no caso da autenticação de EMAIL/SENHA, a parte de validalção de
+	EMAIL e SENHA devem ser feitos por nós programadores.
+
+	VLW, FLW.
+
+	VIDEO PARA AUTENTICAÇAO COM O GOOGLE:
+	
+	https://www.youtube.com/watch?v=hb85pYZSJaI
+
+	VIDEO PARA AUTENTICAÇAO COM EMAIL e SENHA:
+
+	https://www.youtube.com/watch?v=-OKrloDzGpU
+	
+*/
+//###########################
+
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA64sYTkE9BNfScQOOIBS2h5wkjYJO6BCM",
+    authDomain: "comandavirtual-e6526.firebaseapp.com",
+    databaseURL: "https://comandavirtual-e6526.firebaseio.com",
+    projectId: "comandavirtual-e6526",
+    storageBucket: "",
+    messagingSenderId: "1045938130389"
+  };
+  firebase.initializeApp(config);
+
+
+  //Pegar os elementos da pagina de login...
+
+  const campoEmail = document.getElementById('email');
+  const campoSenha = document.getElementById('senha');
+  const btnLogin = document.getElementById('btnLogin');
+  const btnSignUp = document.getElementById('btnSignUp');
+  const btnLogout = document.getElementById('btnLogout');
+
+
+  //aqui vou criar um evento para o login...
+  btnLogin.addEventListener('click', e => { //Cria o evento click e cria uma funcao de retorno com o email e a senha...
+
+  	const email = campoEmail.value; //Pega email digitado...
+
+  	const senha = campoSenha.value; //Pega Senha digitada..
+
+  	const auth = firebase.auth(); // Armazena o firebase.auth na variavel auth..
+
+  	//Logar:
+
+  	const usuario = auth.signInWithEmailAndPassword(email, senha);
+
+  	usuario.catch(e => console.log(e.message));
+
+  });
+
+  //Registro do Usuario:
+
+  //Primeiro criar um event Listener para o botao de cadastro..
+
+  	btnSignUp.addEventListener('click', e => {
+
+  	  	const email = campoEmail.value; //Pega email digitado...
+
+  	const senha = campoSenha.value; //Pega Senha digitada..
+
+  	const auth = firebase.auth(); // Armazena o firebase.auth na variavel auth..
+
+  	//Logar:
+
+  	const usuario = auth.createUserWithEmailAndPassword(email, senha);
+
+  	usuario.catch(e => console.log(e.message));
+
+  });
+
+  	//Funcão q faz o usuario deslogar ao clicar no botão Sair...
+
+  	btnLogout.addEventListener('click', e => {
+  		firebase.auth().signOut();
+  	});
+
+  	//Criar a autenticação do Usuario em tempo real:
+  	//Verifica se o usuario está logado ou nao:
+
+  	firebase.auth().onAuthStateChanged(firebaseUser => {
+
+  		if(firebaseUser){ //se o usuario estiver logado
+  			console.log(firebaseUser); // Mostre as informações no console.
+  			//Aqui mostraremos o botao de deslogar:
+  			alert('Usuario Logado!');
+  			btnLogout.classList.remove('hide');
+  			btnSignUp.classList.add('hide'); // Oculta o botão de cadastro
+  			//window.location = "http://www.google.com";   //Redireciona pra algum lugar
+  		} else { //Se o usuario não estiver logado
+  			alert('Usuario não logado');
+  			console.log("Usuario não logado."); // Mostre isto no console.
+  			btnLogout.classList.add('hide'); //Oculta botão de logout
+  			btnSignUp.classList.remove('hide'); // Mostra botão de cadastro
+  		}
+
+  	});
+
+
+
+</script>
+	
+  </body>
+</html>
