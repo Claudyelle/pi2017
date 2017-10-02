@@ -8,8 +8,32 @@
 </head>
 <body>
 	<div class="center">
-		<h1>Seu cadastro foi efetuado com sucesso!</h1>
+		<h1 style="text-align: center;"></h1>
+		<h2>Seu cadastro foi efetuado com sucesso!</h2>
 		<a href="../_inicio/index.html"><h3>Clique aqui para acessar sua conta.</h3></a>
 </div>
+<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+
+<script>
+	  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA64sYTkE9BNfScQOOIBS2h5wkjYJO6BCM",
+    authDomain: "comandavirtual-e6526.firebaseapp.com",
+    databaseURL: "https://comandavirtual-e6526.firebaseio.com",
+    projectId: "comandavirtual-e6526",
+    storageBucket: "comandavirtual-e6526.appspot.com",
+    messagingSenderId: "1045938130389"
+  };
+  firebase.initializeApp(config);
+
+
+  var auth = firebase.auth();
+
+auth.onAuthStateChanged(function(usuario){
+			let h1 = document.querySelector('h1');
+			h1.innerHTML = "Bem vindo, " + usuario.email + "!";
+		}
+	);
+</script>
 </body>
 </html>

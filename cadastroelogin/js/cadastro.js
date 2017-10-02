@@ -10,10 +10,9 @@
   firebase.initializeApp(config);
 
   var auth = firebase.auth();
-  var DB   = firebase.storage();
+  var DB   = firebase.database();
 
   //Elementos do formulario e o botao
-
   var campoEmail            = document.getElementById('email');
   var erroEmail             = document.getElementById('erroEmail');
   var campoSenha            = document.getElementById('senha');
@@ -33,77 +32,51 @@
   btnCadastro.addEventListener("click", cadastro); //Ao clicar no botao de cadastro, executa a função cadastro.
 
   function cadastro(){
-    email = campoEmail.value;
-    senha = campoSenha.value;
+    var email = campoEmail.value;
+    var senha = campoSenha.value;
 
-    auth.createUserWithEmailAndPassword(email, senha).then(function(user){ //Cadastrar usuario
+    auth.createUserWithEmailAndPassword(
+      email, senha
+      ).then(
+        function(user){
+          let uid = user.uid;
+          let email = campoEmail.value;
+          let senha = campoSenha.value;
+          let rSocial = campoRSocial.value;
+          let cnpj = campoCNPJ.value;
+          let rua = campoRua.value;
+          let numero = campoNumero.value;
+          let bairro = campoBairro.value;
+          let cep = campoCEP.value;
+          let responsavel = campoResponsavel.value;
+          let telefone = campoTelefone.value;
 
-      //Cadastrar o restante dos dados do usuario no BANCO DE DADOS:
-
-      auth.onAuthStateChanged(function(user) { //Usar esse observador pra esperar o usuario logar corretamente
-        if (user) {
-          // SE o usuario tiver logado, então executar esse bloco de codigo:
-          var usuario = { //Cria o objeto usuario com suas informaçoes.
-            nome : user.displayName,
-            email : user.email,
-            emailVerificado : user.emailVerified,
-            photoURL : user.photoURL,
-            anonimo : user.isAnonymous,
-            uid : user.uid,
-            provedor : user.providerData
-          }
-          var infos = {
-            rSocial : campoRSocial.value,
-            cnpj : campoCNPJ.value,
-            rua : campoRua.value,
-            numero : campoNumero.value,
-            bairro : campoBairro.value,
-            cep : campoCEP.value,
-            responsavel : campoResponsavel.value,
-            emailResponsavel : campoEmailResponsavel.value,
-            tel : campoTelefone.value
-          }
-
-          //Aqui vai o resto das informações pro BD:
-            function salvarNoBD(uid, nome, email, photoURL, RSocial, cnpj, rua, numero, bairro, cep, responsavel, emailResponsavel, tel) {
-              firebase.database().ref('usuarios/' + uid).set({
-                username: nome,
-                email: email,
-                imagemPerfil : photoURL,
-                RSocial : RSocial,
-                cnpj : cnpj,
-                rua : rua,
-                numero : numero,
-                bairro : bairro,
-                cep : cep,
-                responsavel : responsavel,
-                emailResponsavel : emailResponsavel,
-                tel : tel
-              });
-            }
-
-            salvarNoBD(usuario.uid, usuario.nome, usuario.email, usuario.photoURL, infos.rSocial, infos.cnpj, infos.rua, infos.numero, infos.bairro, infos.cep, infos.responsavel, infos.emailResponsavel, infos.tel);
-
-            setTimeout(redirect,2500);
-        } else {
-          console.log("Ocorreu um erro. Nao ha nenhum usuario logado.");
+          DB.ref('/usuarios/' + uid + '/').set({
+            uid : uid,
+            email : email,
+            senha : senha,
+            razaoSocial : rSocial,
+            cnpj : cnpj,
+            rua : rua,
+            numero : numero,
+            bairro: bairro,
+            cep : cep,
+            responsavel : responsavel,
+            telefone : telefone,
+          }).then(
+            function(){location.href="cadastrado.html";}
+          );
         }
-      });
-
-    }).catch(function(erro){   //Erro ao cadastrar o usuario
+      ).catch(function(erro){   //Erro ao cadastrar o usuario
       var codigoDeErro = erro.code; //Pega o codigo de erro
       var mensagemDeErro = erro.message; //Pega mensagem de erro
-      if(codigoDeErro == "auth/email-already-in-use"){ //Se o email já estiver cadastrado..
-        campoEmail.style.borderColor = "#F00"; //Borda vermelha no campo email
-        erroEmail.innerHTML = "O Email digitado já está cadastrado."; //Aparece a mensagem de email ja cadastrado.
-        erroEmail.style.display = "block"; //Mostra o erro
+      if(codigoDeErro == "auth/email-already-in-use"){ //Se email estiver em uso:
+        campoEmail.style.borderColor = "#F00";
+        erroEmail.innerHTML = "O Email digitado já está cadastrado.";
+        erroEmail.style.display = "block";
         alert("Email já cadastrado!");
         location.href = "#";
         return false; //Retorna falso.
       }
-    });
-  };
-
-function redirect(){
-  location.href="cadastrado.html";
-}
+    });;
+  }
