@@ -26,7 +26,6 @@ O cliente ainda pode acompanhar o andamento e relatório de consumo via QR code.
 
 ###  Grupo:
 - Claudyelle Rodrigues Rosa
-- Delio da Silva Campos Junior
 - Edinon Junio da Silva Mota 
 - Joao Victor Rodrigues Andrade
 - Victor Assis dos Reis
