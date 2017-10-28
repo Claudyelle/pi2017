@@ -15,12 +15,10 @@ O cliente ainda pode acompanhar o andamento e relatório de consumo via QR code.
 
 ### OUTUBRO:
 - Sistema de cadastro de produtos, categorias;
-- Finalização do Sistema Web;
 - Início da criação do aplicativo;
-- Processo de integração com o Banco de Dados;
 
 ### NOVEMBRO:
-- Integração do QR Code(Cliente visualiza o pedido);
+- Processo de integração com o Banco de Dados;
 - Finalizar o aplicativo.
 
 
