@@ -87,12 +87,14 @@ function listarCategorias(uid){
 
           DB.ref('/produtos/'+uid+'/'+c.nomeDaCategoria+'/produtos'+y+'/').once("value").then(function(name){
 
+
             let nomeDoProduto = name.val();
 
             let caminho = '/produtos/'+uid+'/'+c.nomeDaCategoria+'/produtos'+y+'/';
 
+
             let li = document.createElement('li');
-            li.innerHTML = '<a href="editarProdutos2.html?caminho="'+caminho+ '">' + nomeDoProduto.nomeProduto +'</a>';
+            li.innerHTML = nomeDoProduto.nomeProduto + ' <a href="editarProdutos2.html?caminho='+caminho+'">Editar</a>';
             ul.appendChild(li);
             console.log(nomeDoProduto.nomeProduto);
           });

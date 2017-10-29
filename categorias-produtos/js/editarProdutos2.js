@@ -33,10 +33,13 @@ function local(){
   for(let a = 9; a < location.search.length; a++){
     caminho += location.search[a];
   }
+
   pegarDadosProduto(caminho);
+
 }
 
 function pegarDadosProduto(local){
+
   DB.ref(local).once("value").then(function(dados){
     
     let d = dados.val();
@@ -44,12 +47,22 @@ function pegarDadosProduto(local){
     let nome = document.getElementById('produtoEditandoNome');
     let ing = document.getElementById('produtoEditandoIng');
     let val = document.getElementById('produtoEditandoVal');
-  
+
+    let edit = document.getElementById('editando');
+
+    edit.style.border = "1px solid gray";
+    edit.style.margin = "0 auto";
+	edit.style.width = "70%";
+	edit.style.padding = "20px";
+	edit.style.textAlign = "center";
+
     nome.innerHTML = "Você está editando o produto: <b>"+d.nomeProduto+'</b>';
     ing.innerHTML = "Ingredientes: "+d.ingredientes;
     val.innerHTML = "Valor: "+d.valor;
   })
+
 }
+
 
 let btn = document.getElementById('btn');
 
@@ -61,9 +74,11 @@ btn.addEventListener("click",function(){
 
    if(nvNome.value == "" && nvIng.value == "" && nvVal.value == ""){
       
-      alert("OPS! Você precisa preencher pelo menos 1 campo.");
+      alert("OPS! Vc precisa preencher pelo menos 1 campo.");
       return;
+
    }
+
 
   if(nvNome.value == "" && nvIng.value == ""){
       DB.ref(caminho).update({
@@ -74,22 +89,27 @@ btn.addEventListener("click",function(){
   }
 
   if(nvNome.value == "" && nvVal.value == ""){
+
     DB.ref(caminho).update({
       ingredientes: nvIng.value
     }).then(function(){
       location.href= location;
     });
+
   }
 
   if(nvIng.value == "" && nvVal.value == ""){
+
     DB.ref(caminho).update({
       nomeProduto : nvNome.value
     }).then(function(){
       location.href= location;
     });
+
   }
 
   if(nvNome.value != "" && nvIng.value != "" && nvVal.value != ""){
+
     DB.ref(caminho).update({
       nomeProduto : nvNome.value,
       ingredientes: nvIng.value,
@@ -97,35 +117,42 @@ btn.addEventListener("click",function(){
     }).then(function(){
       location.href= location;
     });
+
   }
 
   if(nvNome.value != "" && nvIng.value != ""){
+
     DB.ref(caminho).update({
       nomeProduto : nvNome.value,
       ingredientes: nvIng.value
     }).then(function(){
       location.href= location;
     });
+
   }
 
-  if(nvNome.value != "" && nvVal.value != ""){
+    if(nvNome.value != "" && nvVal.value != ""){
+
     DB.ref(caminho).update({
       nomeProduto : nvNome.value,
       valor : nvVal.value
     }).then(function(){
       location.href= location;
     });
+
   }
 
-  if(nvIng.value != "" && nvVal.value != ""){
+    if(nvIng.value != "" && nvVal.value != ""){
+
     DB.ref(caminho).update({
       ingredientes: nvIng.value,
       valor : nvVal.value
     }).then(function(){
       location.href= location;
     });
+
   }
 
-alert("Cadastrado com sucesso!");
+  alert("Cadastrado com sucesso!");
 
 });
