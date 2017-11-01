@@ -2,8 +2,8 @@ input{
 	display: inline-block;
 	width: 80%;
 	height: 35px;
-	border-radius: 5px;
-	border: 1px solid gray;
+	border-radius: 8px;
+	border: 2px solid black;
 	margin: 10px 0 10px 0;
 }
 form{
