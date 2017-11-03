@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private FrameLayout frame;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.frame, new BlankFragment())
+                .add(R.id.frame, new BlankFragment())
                 .commit();
 
         button2 = (Button) findViewById(R.id.button2);
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame, new BlankFragment2()).commit();
 
             }
         });
