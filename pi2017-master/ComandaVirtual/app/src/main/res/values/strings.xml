@@ -108,6 +108,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+<<<<<<< HEAD
     <string name="registro"><a href="http://www.google.com">Não está registrado? Registre-se agora!</a></string>
 
     <string name="title_activity_fullscreen">FullscreenActivity</string>

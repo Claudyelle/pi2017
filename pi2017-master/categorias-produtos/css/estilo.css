@@ -1,0 +1,69 @@
+input{
+	display: inline-block;
+	width: 80%;
+	height: 35px;
+	border-radius: 8px;
+	border: 2px solid black;
+	margin: 10px 0 10px 0;
+}
+form{
+	border: 1px solid #333;
+	padding: 10px;
+}
+.espacamento{
+	margin-top: 35px;
+}
+.center{
+	margin: auto;
+	/*display: block;*/
+	text-align: center;
+}
+.erro{
+	width: 100%;
+	display: none;
+	color: #F00;
+}
+.espaco{
+	padding-top: 50px;
+}
+.listar{
+	width: 100%;
+	text-align: center;
+}
+.listar > a{
+	position: relative;
+	top: 40px;
+	padding: 20px;
+	border: 1px solid #F0F;
+}
+.categoriasCadastradas{
+	display: none;
+	position: relative;
+	top: 40px;
+}
+.categoriasCadastradas > ul > li{
+	text-align: left;
+	padding: 5px 0px;
+}
+.listaProd{
+	width: 70%;
+	margin: auto;
+}
+.listaProd > select{
+	width: 70%;
+	height: 30px;
+}
+#prods > li {
+	margin: 10px auto;
+	list-style: square;
+}
+#prods > li > a{
+	color: #60a515;
+	font-weight: bold;
+}
+@media all and (max-width: 767px){
+
+	.cadastro{
+		width: 95%;
+	}
+}
