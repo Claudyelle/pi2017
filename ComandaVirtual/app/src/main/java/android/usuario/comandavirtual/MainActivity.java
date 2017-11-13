@@ -14,6 +14,7 @@ import static java.security.AccessController.getContext;
 
 public class MainActivity extends AppCompatActivity {
 
+    public Button button1;
     public Button button2;
     private FrameLayout frame;
 
@@ -41,7 +42,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //////////////////////////
 
+        button1 = (Button) findViewById(R.id.button1);
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame, new BlankFragment()).commit();
+
+            }
+        });
     }
 
 
