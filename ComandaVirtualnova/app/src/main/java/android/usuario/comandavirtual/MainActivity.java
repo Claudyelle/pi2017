@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     public Button button2;
     public Button button1;
+    public Button button3;
     private FrameLayout frame;
 
     @Override
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
-
+        button3 = (Button) findViewById(R.id.button3);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,8 +50,27 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public  void onClick(View v){
+
+                //getSupportFragmentManager().beginTransaction().replace(R.id.frame, new fragment_tela2()).commit();
+
+            }
+        });
 
 
+
+        button1 = (Button) findViewById(R.id.button1);
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame, new BlankFragment()).commit();
+
+            }
+        });
 
         button1 = (Button) findViewById(R.id.button1);
 

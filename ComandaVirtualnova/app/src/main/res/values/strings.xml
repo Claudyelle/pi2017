@@ -113,7 +113,7 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-=======
+    =======
     <string name="finalizar">Finalizar</string>
->>>>>>> a5e41310f4d11a8a10e57a4c795361412cc3963f
+    >>>>>>> a5e41310f4d11a8a10e57a4c795361412cc3963f
 </resources>
