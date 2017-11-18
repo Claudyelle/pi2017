@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ComandaVirtual.iml" filepath="$PROJECT_DIR$/ComandaVirtual.iml" />
+      <module fileurl="file://C:\Users\Edinon\Documents\Gitbash\PortableGit\pi2017\ComandaVirtualnova\ComandaVirtual.iml" filepath="C:\Users\Edinon\Documents\Gitbash\PortableGit\pi2017\ComandaVirtualnova\ComandaVirtual.iml" />
       <module fileurl="file://$PROJECT_DIR$/ComandaVirtualnova.iml" filepath="$PROJECT_DIR$/ComandaVirtualnova.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

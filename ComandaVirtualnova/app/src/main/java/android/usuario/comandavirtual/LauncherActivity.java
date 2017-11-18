@@ -22,7 +22,7 @@ public class LauncherActivity extends AppCompatActivity implements Runnable {
 
     public void run() {
 
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(intent);
 
         finish();
