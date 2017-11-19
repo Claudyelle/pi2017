@@ -22,7 +22,7 @@
     if(usuario){ //Se tiver usuario logado
      uid = usuario.uid; //Salva uid na variavel;
    } else { //Senao
-     location.href="http://10.0.2.50/LOGIN/index.html"; //Vai pra pagina de login
+     location.href="../cadastroelogin/_login/index.html"; //Vai pra pagina de login
     }
   }
 

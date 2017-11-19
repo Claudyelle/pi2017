@@ -115,5 +115,6 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     =======
     <string name="finalizar">Finalizar</string>
+    <string name="pedido_mesa">PEDIDO - MESA 02</string>
     >>>>>>> a5e41310f4d11a8a10e57a4c795361412cc3963f
 </resources>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1045938130389",
+    "firebase_url": "https://comandavirtual-e6526.firebaseio.com",
+    "project_id": "comandavirtual-e6526",
+    "storage_bucket": "comandavirtual-e6526.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045938130389:android:8f40468b6c8b8f8b",
+        "android_client_info": {
+          "package_name": "android.usuario.comandavirtual"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045938130389-2cgp101jpplssodej1ia00a2bpmpl3d0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "android.usuario.comandavirtual",
+            "certificate_hash": "881ba7c5360ff3aabb13e1f9f87507e9d4880818"
+          }
+        },
+        {
+          "client_id": "1045938130389-i9ifrjrommmpg6du98df125gtg6hqlt4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG4K87EbEU198-tUNP6BOjHb7wK3qPbMw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045938130389-i9ifrjrommmpg6du98df125gtg6hqlt4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

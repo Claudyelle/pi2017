@@ -21,7 +21,7 @@
      uid = usuario.uid;
      local();
    } else { //Senao
-     location.href="../../cadastroelogin/_login/index.html"; //Vai pra pagina de login
+     location.href="../cadastroelogin/_login/index.html"; //Vai pra pagina de login
     }
   }
 

@@ -19,7 +19,7 @@
     if(usuario){ //Se tiver usuario logado
      dadosDoUsuario(usuario.uid, usuario.email);
    } else { //Senao
-     location.href="../../cadastroelogin/_login/index.html"; //Vai pra pagina de login
+     location.href="../cadastroelogin/_login/index.html"; //Vai pra pagina de login
     }
   }
 

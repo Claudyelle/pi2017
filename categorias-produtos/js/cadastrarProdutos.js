@@ -21,7 +21,7 @@
      uid = usuario.uid; //Salva uid na variavel;
      validarID(uid);
    } else { //Senao
-     location.href="../../cadastroelogin/_login/index.html"; //Vai pra pagina de login
+     location.href="../cadastroelogin/_login/index.html"; //Vai pra pagina de login
     }
   }
 
