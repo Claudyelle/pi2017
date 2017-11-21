@@ -3,7 +3,6 @@ package android.usuario.comandavirtual;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -12,7 +11,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 
 import layout.BlankFragment;
-import layout.tela2;
+import layout.BlankFragment2;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +40,16 @@ public class MainActivity extends AppCompatActivity {
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
         button4 = (Button) findViewById(R.id.button4);
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame, new BlankFragment()).commit();
+
+            }
+        });
+
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,46 +59,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame, new BlankFragment()).commit();
-
-            }
-        });
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame, new tela2()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame, new Tela2()).commit();
 
             }
         });
 
-
-        button1 = (Button) findViewById(R.id.button1);
-
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame, new BlankFragment()).commit();
-
-            }
-        });
-
-        button1 = (Button) findViewById(R.id.button1);
-
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame, new BlankFragment()).commit();
-
-            }
-        });
         firebaseAuth = FirebaseAuth.getInstance();
 
         button4.setOnClickListener(new View.OnClickListener(){

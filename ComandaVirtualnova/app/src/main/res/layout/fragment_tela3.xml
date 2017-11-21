@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="android.usuario.comandavirtual.relatorio">
+    tools:context="android.usuario.comandavirtual.Tela3">
 
     <FrameLayout
         android:id="@+id/frame"
@@ -375,26 +375,41 @@
                     android:paddingLeft="10dp"
                     android:textColorHint="@android:color/black"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
                 <Button
-                    android:id="@+id/andamento"
-                    android:layout_width="300dp"
+                    android:id="@+id/button13"
+                    android:layout_width="110dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
                     android:layout_marginTop="8dp"
                     android:background="#39C33F"
-                    android:text="Em andamento"
+                    android:text="Voltar"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextObs"
+                    app:layout_constraintVertical_bias="0.219" />
+
+                <Button
+                    android:id="@+id/button14"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#39C33F"
+                    android:text="Finalizar"
                     android:textColor="@android:color/white"
                     android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/editTextObs"
-                    app:layout_constraintVertical_bias="0.219"
-                    tools:layout_constraintTop_creator="1" />
+                    app:layout_constraintVertical_bias="0.219" />
 
             </android.support.constraint.ConstraintLayout>
 
