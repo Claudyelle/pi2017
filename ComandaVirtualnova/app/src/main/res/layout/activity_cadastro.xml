@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.usuario.comandavirtual.android.usuario.comandavirtual.CadastroActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8c8c8c"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cadastro"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.034" />
+
+        <EditText
+            android:id="@+id/campoemail"
+            android:layout_width="260sp"
+            android:layout_height="37dp"
+            android:ems="10"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:theme="@style/MyEditTextTheme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.148"
+            tools:layout_constraintTop_creator="1" />
+
+        <EditText
+            android:id="@+id/camposenha"
+            android:layout_width="260sp"
+            android:layout_height="40sp"
+            android:ems="10"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:theme="@style/MyEditTextTheme"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/campoemail"
+            tools:layout_constraintTop_creator="1" />
+
+        <EditText
+            android:id="@+id/rsocial"
+            android:layout_width="260sp"
+            android:layout_height="40sp"
+            android:ems="10"
+            android:hint="Razão Social"
+            android:inputType="textAutoComplete"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:theme="@style/MyEditTextTheme"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/camposenha"
+            tools:layout_constraintTop_creator="1" />
+
+        <EditText
+            android:id="@+id/cnpj"
+            android:layout_width="260sp"
+            android:layout_height="40sp"
+            android:ems="10"
+            android:hint="CNPJ"
+            android:inputType="text"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:theme="@style/MyEditTextTheme"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rsocial"
+            tools:layout_constraintTop_creator="1" />
+
+        <EditText
+            android:id="@+id/rua"
+            android:layout_width="260sp"
+            android:layout_height="40sp"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:hint="Rua"
+            android:inputType="textAutoComplete"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:theme="@style/MyEditTextTheme"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cnpj"
+            tools:layout_constraintTop_creator="1" />
+
+        <EditText
+            android:id="@+id/numero"
+            android:layout_width="260sp"
+            android:layout_height="40sp"
+            android:ems="10"
+            android:hint="Numero"
+            android:inputType="text"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:theme="@style/MyEditTextTheme"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rua"
+            tools:layout_constraintTop_creator="1" />
+
+        <EditText
+            android:id="@+id/bairro"
+            android:layout_width="260sp"
+            android:layout_height="40sp"
+            android:ems="10"
+            android:hint="Bairro"
+            android:inputType="textAutoComplete"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:theme="@style/MyEditTextTheme"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numero"
+            tools:layout_constraintTop_creator="1" />
+        <EditText
+            android:id="@+id/cep"
+            android:layout_width="260sp"
+            android:layout_height="40sp"
+            android:ems="10"
+            android:hint="CEP"
+            android:inputType="text"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:theme="@style/MyEditTextTheme"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bairro"
+            tools:layout_constraintTop_creator="1" />
+
+        <EditText
+            android:id="@+id/telefone"
+            android:layout_width="260sp"
+            android:layout_height="40sp"
+            android:ems="10"
+            android:hint="Telefone"
+            android:inputType="text"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:theme="@style/MyEditTextTheme"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cep"
+            tools:layout_constraintTop_creator="1" />
+
+        <Button
+            android:id="@+id/buttonCadastro"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="344dp"
+            android:background="@android:color/white"
+            android:text="Cadastrar"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/campoemail"
+            tools:layout_constraintTop_creator="1" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,11 +25,24 @@ public class LoginActivity extends AppCompatActivity {
     private EditText email;
     private EditText senha;
     private Button btnLogin;
+    private TextView link;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+
+        link = (TextView) findViewById(R.id.linkRegistro);
+
+        link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent cadastroActivity = new Intent(LoginActivity.this, CadastroActivity.class);
+                startActivity(cadastroActivity);
+            }
+        });
+
 
         btnLogin = (Button) findViewById(R.id.buttonLogin);
         email = (EditText) findViewById(R.id.editText);
