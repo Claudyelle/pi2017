@@ -380,7 +380,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
                 <Button
-                    android:id="@+id/button13"
+                    android:id="@+id/buttonVoltarMesa02"
                     android:layout_width="110dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="8dp"
@@ -396,7 +396,7 @@
                     app:layout_constraintVertical_bias="0.219" />
 
                 <Button
-                    android:id="@+id/button14"
+                    android:id="@+id/buttonFinalizarMesa02"
                     android:layout_width="110dp"
                     android:layout_height="40dp"
                     android:layout_marginBottom="8dp"

@@ -66,7 +66,7 @@
                 tools:layout_editor_absoluteX="8dp">
 
                 <LinearLayout
-                    android:id="@+id/linearLayout3"
+                    android:id="@+id/linearLayout1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="40dp"
@@ -84,7 +84,7 @@
                     tools:layout_constraintRight_creator="1">
 
                     <Button
-                        android:id="@+id/button5"
+                        android:id="@+id/buttonMesa01"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_margin="5dp"
@@ -97,7 +97,7 @@
                         tools:layout_editor_absoluteY="133dp" />
 
                     <Button
-                        android:id="@+id/button6"
+                        android:id="@+id/buttonMesa02"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_margin="5dp"
@@ -110,7 +110,7 @@
                         tools:layout_editor_absoluteY="191dp" />
 
                     <Button
-                        android:id="@+id/button7"
+                        android:id="@+id/buttonMesa03"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_margin="5dp"
@@ -123,7 +123,7 @@
                         tools:layout_editor_absoluteY="254dp" />
 
                     <Button
-                        android:id="@+id/button8"
+                        android:id="@+id/buttonMesa04"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_margin="5dp"
@@ -136,7 +136,7 @@
                         tools:layout_editor_absoluteY="311dp" />
 
                     <Button
-                        android:id="@+id/button9"
+                        android:id="@+id/buttonMesa05"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_margin="5dp"
@@ -149,7 +149,7 @@
                         tools:layout_editor_absoluteY="368dp" />
 
                     <Button
-                        android:id="@+id/button10"
+                        android:id="@+id/buttonMesa06"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_margin="5dp"
@@ -162,7 +162,7 @@
                         tools:layout_editor_absoluteY="424dp" />
 
                     <Button
-                        android:id="@+id/button11"
+                        android:id="@+id/buttonMesa07"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_margin="5dp"
@@ -175,7 +175,7 @@
                         tools:layout_editor_absoluteY="486dp" />
 
                     <Button
-                        android:id="@+id/button12"
+                        android:id="@+id/buttonMesa08"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_margin="5dp"

@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame, new BlankFragment2()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame, new Tela4()).commit();
 
             }
         });
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame, new Tela2()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame, new Tela6()).commit();
 
             }
         });
