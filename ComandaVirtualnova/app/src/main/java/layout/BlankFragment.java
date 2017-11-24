@@ -52,17 +52,6 @@ public class BlankFragment extends Fragment {
         buttonMesa01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                databaseReference = ConfiguracaoFirebase.getFirebase();
-
-              databaseReference.child("Mesa1").child("Bebida").child("Suco de Laranja").setValue("1");
-              databaseReference.child("Mesa1").child("Bebida").child("Coca-Cola 2L").setValue("1");
-
-                databaseReference.child("Mesa1").child("Comida").child("Frango caipira").setValue("1");
-                databaseReference.child("Mesa1").child("Comida").child("Carne de sol").setValue("1");
-
-                Toast.makeText(getActivity(), "Pedido da MESA 1 foi registrado!", Toast.LENGTH_SHORT).show();
-
               getFragmentManager().beginTransaction().replace(R.id.frame, new Tela2()).commit();
 
             }

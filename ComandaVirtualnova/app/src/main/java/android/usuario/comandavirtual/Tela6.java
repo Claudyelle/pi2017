@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
  */
 public class Tela6 extends Fragment {
 
+    public Button buttonAndamento01;
 
     public Tela6() {
         // Required empty public constructor
@@ -24,6 +26,8 @@ public class Tela6 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_tela6, container, false);
+
+
     }
 
 }

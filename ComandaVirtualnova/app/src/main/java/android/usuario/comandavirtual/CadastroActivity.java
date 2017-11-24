@@ -90,7 +90,7 @@ public class CadastroActivity extends AppCompatActivity {
 
                         }
                         else{
-                            Toast.makeText(CadastroActivity.this, "Erro ao cadastrar, tente outro email.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CadastroActivity.this, "Erro! Verifique sua conexão com a internet ou tente outro email", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
