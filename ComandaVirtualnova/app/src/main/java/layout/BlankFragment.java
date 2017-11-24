@@ -12,6 +12,12 @@ import android.content.Intent;
 import android.usuario.comandavirtual.R;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import config.ConfiguracaoFirebase;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,6 +32,8 @@ public class BlankFragment extends Fragment {
     private Button buttonMesa06;
     private Button buttonMesa07;
     private Button buttonMesa08;
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
 
 
     public BlankFragment() {
@@ -44,6 +52,16 @@ public class BlankFragment extends Fragment {
         buttonMesa01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                databaseReference = ConfiguracaoFirebase.getFirebase();
+
+              databaseReference.child("Mesa1").child("Bebida").child("Suco de Laranja").setValue("1");
+              databaseReference.child("Mesa1").child("Bebida").child("Coca-Cola 2L").setValue("1");
+
+                databaseReference.child("Mesa1").child("Comida").child("Frango caipira").setValue("1");
+                databaseReference.child("Mesa1").child("Comida").child("Carne de sol").setValue("1");
+
+                Toast.makeText(getActivity(), "Pedido da MESA 1 foi registrado!", Toast.LENGTH_SHORT).show();
 
               getFragmentManager().beginTransaction().replace(R.id.frame, new Tela2()).commit();
 
